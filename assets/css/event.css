@@ -70,7 +70,7 @@ button,label,a,.btn{cursor: pointer;}
 /* event popup */
 .open {overflow:hidden}
 .open .popup{display:block;overflow-y:auto}
-.popup{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:20}
+.popup{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:20;background:black}
 .popup .popup-inner{position:relative;width:100%;height:100%;max-width:750px;margin:0 auto}
 .popup .popup-inner .btn{position:absolute;height:0;overflow:hidden;background:transparent}
 .popup .popup-inner .btn-pop-close{top:8%;right:5.86%;width:7.6%;padding-top:7.86%;background:url(../images/btn-close.png) no-repeat 0 0/contain}
