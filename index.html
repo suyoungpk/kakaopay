@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./assets/css/event.css">
     <script src="./assets/js/event.js"></script>
 </head>
-<body class="">
+<body>
     <section class="event_container">
         <div class="bg"></div>
         <div class="event_header">
@@ -20,8 +20,8 @@
         </div><!--// event_header -->
         <main class="event_body">
             <div class="txt-title">
-                <span class="fire"></span>
-                <p class="dropthe">Drop the <span class="light"></span></p><p class="money">money <span class="light"></span></p>
+                <div class="fire"><span><span></span><span></span><span></span></span></div>
+                <p class="dropthe">Drop the <span class="light"></span></p><p class="money">money <span class="light"><span></span><span></span></span></p>
                 <p class="txt-box">송금만 해도 현금이 쏟아진다! </p>
             </div>
             <div class="money-box">
@@ -34,14 +34,34 @@
                 1주차 6.30 ~ 7.6 추첨을 통해 카카오머니를 드립니다.
                 백만원 : 1명, 1만원 : 100명, 1천원: 1천명, 붸액원 : 15만명
             </p>
-            <h4 class="hidden">친구들도 우리와 함께 갑시다.</h4>
-            <ul class="sns">
-                <li><button class="btn" type="button" title="카카오톡으로 공유하기">카카오톡으로 공유하기</button></li>
-                <li><button class="btn" type="button" title="카카오스토리로 공유하기">카카오스토리로 공유하기</button></li>
-                <li><button class="btn" type="button" title="페이스북으로 공유하기">페이스북으로 공유하기</button></li>
-                <li><button class="btn" type="button" title="트위터로 공유하기">트위터로 공유하기</button></li>
-            </ul>
-            <button class="btn btn-apply" type="button" title="참여하기">참여하기</button>
+            <div class="snsBox">
+                <h4>친구들도 우리와 함께 갑시다.</h4>
+                <ul class="sns">
+                    <li><button class="btn" type="button" title="카카오톡으로 공유하기">카카오톡으로 공유하기</button></li>
+                    <li><button class="btn" type="button" title="카카오스토리로 공유하기">카카오스토리로 공유하기</button></li>
+                    <li><button class="btn" type="button" title="페이스북으로 공유하기">페이스북으로 공유하기</button></li>
+                    <li><button class="btn" type="button" title="트위터로 공유하기">트위터로 공유하기</button></li>
+                </ul>
+            </div>
+            <div class="coinBox second">
+               <div>
+                    <span class="coin coin-left1 coin-delay"></span> 
+                    <span class="coin coin-left2 coin-delay"></span> 
+                    <span class="coin coin-left3 coin-delay2"></span> 
+                    <span class="coin coin-right1 coin-delay"></span> 
+                    <span class="coin coin-right2 coin-delay"></span> 
+                    <span class="coin coin-right3 coin-delay2"></span> 
+               </div>
+            </div>
+            <div class="coinBox once">
+                <div>
+                     <span class="coin coin01 big"></span> 
+                     <span class="coin coin02 big2"></span> 
+                     <span class="coin coin-right1"></span> 
+                     <span class="coin coin-right2"></span> 
+                </div>
+             </div>
+            <button class="btn btn-apply" type="button" title="참여하기" onclick="openPopup();">참여하기</button>
         </main><!--// event_body -->
         <div class="popup">
             <div class="popup-inner">
@@ -59,7 +79,7 @@
                     <button class="btn btn-update" type="button" title="카톡 업데이트">카톡 업데이트</button>
                     <button class="btn btn-send" type="button" title="송금하기">송금하기</button>
                 </div>
-                <button class="btn btn-pop-close" type="button" title="팝업 닫기">팝업 닫기</button>
+                <button class="btn btn-pop-close" type="button" title="팝업 닫기" onclick="closePopup();">팝업 닫기</button>
             </div>
         </div>
     </section>
