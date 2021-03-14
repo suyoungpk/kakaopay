@@ -46,11 +46,12 @@ button,label,a,.btn{cursor: pointer;}
 .event_container .event_body .money-box .text {width: 31.4%;}
 .event_container .event_body .txt-info {margin:6.4% auto 0;width:74%;padding-top:42.88%;height:0;overflow:hidden;background:url(../images/txt-info2.png) no-repeat 0 0 /contain}
 .event_container .event_body .snsBox{position:relative;margin:-2% auto 0}
-.event_container .event_body .snsBox h4{opacity:.5;position:absolute;top:0;left:0;width:100%;height:0;padding-top:25.33%;overflow:hidden;background:url(../images/sns_off.png) no-repeat top center /92.52% auto}
+.event_container .event_body .snsBox h4{position:absolute;top:0;left:0;width:100%;height:0;padding-top:25.33%;overflow:hidden;background:url(../images/sns_off.png) no-repeat top center /92.52% auto}
+.event_container .event_body .snsBox h4::before{opacity:0;display:block;position:absolute;content:'';top:0;left:0;width:100%;height:100%;background:url(../images/sns_on.png) no-repeat top center /92.52% auto}
 .event_container .event_body .sns{display:flex;flex-flow:row wrap;width:100%;padding:8.93% 14% 4.53%;overflow:hidden;background:url(../images/sns_btn.png) no-repeat top center /92.52% auto}
 .event_container .event_body .sns li{position:relative;width:25%;height:0;padding-top:16.48%}
 .event_container .event_body .sns li .btn{position:absolute;top:0;left:0;width:100%;height:0;padding-top:65.9%;overflow:hidden;background:transparent}
-.event_container .event_body .btn-apply{position:fixed;bottom:0;left:50% ;width:97.86%;transform:translate(-48.8%,0);max-width:750px;padding-top:19.6%;height:0;overflow:hidden;background:url(../images/btn-apply.png) no-repeat 0 0 /contain;z-index:10}
+.event_container .event_body .btn-apply{position:fixed;bottom:0;left:50% ;width:97.86%;transform:translate(-48.8%,0);max-width:750px;padding-top:19.6vmin;height:0;overflow:hidden;background:url(../images/btn-apply.png) no-repeat 0 0 /contain;z-index:10}
 .event_container .event_body .coinBox{position:absolute;top:23vmin;left:0;width:100%;height:70vmin;}
 .event_container .event_body .coinBox > div{position:relative;width:100%;height:100%}
 .event_container .event_body .coinBox .coin{display:block;position:absolute;height:0;overflow:hidden;background-size:contain;background-repeat:no-repeat;background-position:0 0;transform: translate3d(0,0,0);transition:all .3s ease-in-out;}
@@ -70,7 +71,7 @@ button,label,a,.btn{cursor: pointer;}
 /* event popup */
 .open {overflow:hidden}
 .open .popup{display:block;overflow-y:auto}
-.popup{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:20;background:black}
+.popup{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:20;}
 .popup .popup-inner{position:relative;width:100%;height:100%;max-width:750px;margin:0 auto}
 .popup .popup-inner .btn{position:absolute;height:0;overflow:hidden;background:transparent}
 .popup .popup-inner .btn-pop-close{top:8%;right:5.86%;width:7.6%;padding-top:7.86%;background:url(../images/btn-close.png) no-repeat 0 0/contain}
@@ -101,7 +102,7 @@ button,label,a,.btn{cursor: pointer;}
 .init .txt-title .money .light span:nth-child(1){animation: lightcontrol2 1s ease-in-out 3.3s;animation-fill-mode: both}
 .init .txt-title .money .light span:nth-child(2){animation: lightcontrol .5s ease-in-out 1.3s;animation-fill-mode: both}
 
-.event_container .event_body .snsBox.on h4{animation: turnon 1s ease-in-out;animation-fill-mode: both}
+.event_container .event_body .snsBox.on h4::before{animation: turnon 1s ease-in-out;animation-fill-mode: both}
 
 .popup .popup-inner .upperSide{transform:translate(0,-100%)}
 .popup.play .popup-inner .upperSide{transform:translate(0,0);animation: bounce .5s ease-in-out 1s;}
@@ -125,10 +126,10 @@ button,label,a,.btn{cursor: pointer;}
     100%{transform:translate(0,0)}
 }
 @keyframes turnon{
-    0%{opacity:.5;background-image:url(../images/sns_off.png)}
-    25%{opacity:1;background-image:url(../images/sns_on.png)}
-    75%{opacity:.5;background-image:url(../images/sns_off.png)}
-    100%{opacity:1;background-image:url(../images/sns_on.png)}
+    0%{opacity:0}
+    25%{opacity:.8}
+    75%{opacity:0}
+    100%{opacity:1}
 }
 @keyframes coinBox{
     0%{width:100%;opacity:1;height:100%;transform: translate(0,-100%)}

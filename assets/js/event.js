@@ -8,12 +8,8 @@ var eventjs = (function () {
     var count = 0,
     yOffset = 0,
     _yOffset = 0,
-    sign,sign2,
-    obj = [
-        {
-            container : document.querySelector('.snsBox')
-        }
-    ];
+    sign,sign2;
+    
     window.addEventListener('beforeunload', function () {
         window.scrollTo(0, 0); //새로고침 시 상단부터 시작
     });
@@ -30,14 +26,14 @@ var eventjs = (function () {
         if(_direction == 'down'){
             count++;
             if(count > 50) count = 50;
-            sign = "-"+(count*0.4);
-            sign2 = "-"+(count*0.8);
+            sign = "-"+(count*0.6);
+            sign2 = "-"+(count*1);
             document.querySelector('.snsBox').classList.add('on');
         }else{
             count--;
             if(count < 0) count = 0;
-            sign = "+"+(count*0.4);
-            sign2 = "+"+(count*0.8);
+            sign = "+"+(count*0.6);
+            sign2 = "+"+(count*1);
         }
         var arr = document.body.querySelectorAll('.coin-delay');
         var arr2 = document.body.querySelectorAll('.coin-delay2');
